@@ -42,7 +42,7 @@
 				</p>
 			</section>
 
-			<section class="small-slide">
+			<section class="small-slide styled-list">
 				<h3>What do we need?</h3>
 				<ol>
 					<li>
@@ -69,7 +69,8 @@
 
 						<!-- Right: Text -->
 						<div style="flex: 1; padding-left: 30px;">
-							1. Model environment as Markov Decision Process
+							<span class="monopoly_board_teal">1. </span>Model environment as Markov Decision
+							Process
 						</div>
 					</div>
 				</section>
@@ -164,7 +165,7 @@ Property:
 
 						<!-- Right: Text -->
 						<div style="flex: 1; padding-left: 30px;">
-							2. Set up DRL agents
+							<span class="monopoly_board_teal">2. </span>Set up DRL agents
 						</div>
 					</div>
 				</section>
@@ -363,7 +364,7 @@ Property:
 
 						<!-- Right: Text -->
 						<div style="flex: 1; padding-left: 30px;">
-							3. Evaluate performance
+							<span class="monopoly_board_teal">3. </span>Evaluate performance
 						</div>
 					</div>
 				</section>
@@ -499,6 +500,17 @@ Property:
 
 				.small-slide {
 					font-size: 0.8em;
+				}
+
+				.monopoly_board_teal {
+					color: #d0e8da;
+					font-weight: bold;
+				}
+
+				.styled-list ol li::marker {
+					font-weight: bold;
+					color: #d0e8da;
+					/* Change this to any color you like */
 				}
 			</style>
 
