@@ -31,14 +31,20 @@
 			<section>
 				<a href="https://revealjs.com">
 					<img src="imgs/logosource_monopoly-logo.png"
-						style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
+						style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="fragment"
+						data-fragment-index="1">
 				</a>
-				<h3>How to Win at Monopoly using DRL</h3>
+				<h3 class="fragment" data-fragment-index="1">How to Win at Monopoly using DRL</h3>
+				<p class="tiny fragment" data-fragment-index="1">
+					Trevor Bonjour et al. “Decision Making in Monopoly Using a Hybrid Deep Reinforcement
+						Learning Approach”. In: IEEE Transactions on Emerging Topics in Computational Intelligence
+						6.6 (Dec. 2022), pp. 1335–1344. ISSN: 2471-285X. DOI: 10.1109/TETCI.2022.3166555.
+				</p>
 				<p>
 					<small>Jan-Niklas Forster & Elisa Gilbert</small>
 				</p>
 				<p>
-					<small>03.06.2025</small>
+					<small>03.06.2025 – Advanced Deep Learning</small>
 				</p>
 			</section>
 
@@ -46,13 +52,15 @@
 				<h3>What do we need?</h3>
 				<ol>
 					<li>
-						Model environment <span class="fragment monopoly_red">← Game board &amp; rules</span>
+						Model environment <span class="fragment monopoly_red" data-fragment-index="1">← Game board &amp;
+							rules</span>
 					</li>
 					<li>
-						Set up agents <span class="fragment monopoly_red">← Players</span>
+						Set up agents <span class="fragment monopoly_red" data-fragment-index="1">← Players</span>
 					</li>
 					<li>
-						Evaluate their Monopoly performance! <span class="fragment monopoly_red">← Who wins?</span>
+						Evaluate their performance <span class="fragment monopoly_red" data-fragment-index="1">← Who
+							wins?</span>
 					</li>
 				</ol>
 			</section>
@@ -69,7 +77,7 @@
 
 						<!-- Right: Text -->
 						<div style="flex: 1; padding-left: 30px;">
-							<span class="monopoly_board_teal">1. </span>Model environment as Markov Decision
+							<span class="bold-teal">1. </span>Model environment as Markov Decision
 							Process
 						</div>
 					</div>
@@ -165,7 +173,7 @@ Property:
 
 						<!-- Right: Text -->
 						<div style="flex: 1; padding-left: 30px;">
-							<span class="monopoly_board_teal">2. </span>Set up DRL agents
+							<span class="bold-teal">2. </span>Set up DRL agents
 						</div>
 					</div>
 				</section>
@@ -364,7 +372,7 @@ Property:
 
 						<!-- Right: Text -->
 						<div style="flex: 1; padding-left: 30px;">
-							<span class="monopoly_board_teal">3. </span>Evaluate performance
+							<span class="bold-teal">3. </span>Evaluate performance
 						</div>
 					</div>
 				</section>
@@ -376,83 +384,101 @@ Property:
 					<h3>Training</h3>
 					<img src="imgs/ddqn_training.png">
 				</section>
-				<section>
+				<section class="small-slide">
 					<h3>Evaluation</h3>
-					<p>🤖 vs. ♟️♟️♟️</p>
+					<p class="italic">1 Agent vs. 3 NPCs<br><br></p>
+					<!-- <p><i>Agent vs. 3 NPCs</i>🤖 vs. ♟️♟️♟️<br><br></p> -->
 					<table>
 						<tr>
-							<th>Agent</th>
+							<th></th>
 							<th>Win Rate (%)</th>
 						</tr>
 						<tr>
-							<td>Standard PPO</td>
+							<td><img src="imgs/dog1.png" class="inline-icon"> Standard PPO</td>
 							<td>70%</td>
 						</tr>
 						<tr>
-							<td>Hybrid PPO</td>
-							<td>92%</td>
+							<td><img src="imgs/dog_with_hat.png" class="inline-icon"> Hybrid PPO</td>
+							<td><span class="bold-light-red">92%</span></td>
 						</tr>
 						<tr>
-							<td>Standard DDQN</td>
+							<td><img src="imgs/car1.png" class="inline-icon"> Standard DDQN</td>
 							<td>47%</td>
 						</tr>
 						<tr>
-							<td>Hybrid DDQN</td>
-							<td>76%</td>
+							<td><img src="imgs/car_with_hat.png" class="inline-icon"> Hybrid DDQN</td>
+							<td>77%</td>
 						</tr>
 					</table>
 				</section>
-				<section>
+
+				<section class="small-slide">
 					<h3>Evaluation</h3>
-					<p>🤖 vs. 🤖 vs. ♟️♟️</p>
-					<table>
-						<tr>
-							<th>Agent</th>
-							<th>Win Rate (%)</th>
-						</tr>
-						<tr>
-							<td>Standard PPO</td>
-							<td>70%</td>
-						</tr>
-						<tr>
-							<td>Hybrid PPO</td>
-							<td>6%</td>
-						</tr>
-						<tr>
-							<td>Standard DDQN</td>
-							<td>47%</td>
-						</tr>
-						<tr>
-							<td>Hybrid DDQN</td>
-							<td>14%</td>
-						</tr>
-					</table>
+					<p class="italic">Standard vs. Hybrid vs. 2 NPCs<br><br></p>
+					<div class="vertical-split">
+						<div class="half small-slide">
+							<table>
+								<tr>
+									<th></th>
+									<th>Win Rate (%)</th>
+								</tr>
+								<tr>
+									<td><img src="imgs/dog1.png" class="inline-icon"> Standard PPO</td>
+									<td>6%</td>
+								</tr>
+								<tr>
+									<td><img src="imgs/dog_with_hat.png" class="inline-icon"> Hybrid PPO</td>
+									<td><span class="bold-light-red">89%</span></td>
+								</tr>
+							</table>
+						</div>
+						<div class="half small-slide">
+							<table>
+								<tr>
+									<th></th>
+									<th>Win Rate (%)</th>
+								</tr>
+								<tr>
+									<td><img src="imgs/car1.png" class="inline-icon"> Standard DDQN</td>
+									<td>14%</td>
+								</tr>
+								<tr>
+									<td><img src="imgs/car_with_hat.png" class="inline-icon"> Hybrid DDQN</td>
+									<td>57%</td>
+								</tr>
+							</table>
+						</div>
+					</div>
 				</section>
-				<section>
+				<section class="small-slide">
 					<h3>Evaluation</h3>
-					<p>🤖 vs. 🤖 vs. 🤖 vs. 🤖</p>
-					<table>
-						<tr>
-							<th>Agent</th>
-							<th>Win Rate (%)</th>
-						</tr>
-						<tr>
-							<td>Standard PPO</td>
-							<td>1%</td>
-						</tr>
-						<tr>
-							<td>Hybrid PPO</td>
-							<td>69%</td>
-						</tr>
-						<tr>
-							<td>Standard DDQN</td>
-							<td>1%</td>
-						</tr>
-						<tr>
-							<td>Hybrid DDQN</td>
-							<td>29%</td>
-						</tr>
-					</table>
+					<p class="italic"> All agents against each other 🔥
+					</p>
+
+					<span class="small-slide">
+						<table>
+							<tr>
+								<th></th>
+								<th>Win Rate (%)</th>
+							</tr>
+							<tr>
+								<td><img src="imgs/dog1.png" class="inline-icon"> Standard PPO</td>
+								<td>1%</td>
+							</tr>
+							<tr>
+								<td><img src="imgs/dog_with_hat.png" class="inline-icon"> Hybrid PPO</td>
+								<td><span class="bold-light-red">69%</span></td>
+							</tr>
+							<tr>
+								<td><img src="imgs/car1.png" class="inline-icon"> Standard DDQN</td>
+								<td>1%</td>
+							</tr>
+							<tr>
+								<td><img src="imgs/car_with_hat.png" class="inline-icon"> Hybrid DDQN</td>
+								<td>29%</td>
+							</tr>
+						</table>
+					</span>
 				</section>
 			</section>
 
@@ -470,6 +496,9 @@ Property:
 
 
 			<style>
+				.tiny {
+					font-size: 0.4em;
+				}
 				.vertical-split {
 					display: flex;
 					justify-content: space-between;
@@ -493,16 +522,30 @@ Property:
 
 				.monopoly_red {
 					color: #d40000;
-					/* Monopoly red */
 					font-style: italic;
-					margin-left: 0.5em;
+					/* margin-left: 0.5em; */
+				}
+
+				.italic {
+					color: #d36b6b;
+					font-style: italic;
+					/* margin-left: 0.5em; */
+				}
+
+				.bold-light-red {
+					color: #d36b6b;
+					font-weight: bold;
 				}
 
 				.small-slide {
 					font-size: 0.8em;
 				}
 
-				.monopoly_board_teal {
+				pre code {
+					font-size: 0.8em !important;
+				}
+
+				.bold-teal {
 					color: #d0e8da;
 					font-weight: bold;
 				}
@@ -511,6 +554,17 @@ Property:
 					font-weight: bold;
 					color: #d0e8da;
 					/* Change this to any color you like */
+				}
+
+				.inline-icon {
+					height: 1em;
+					vertical-align: middle;
+					margin: 0 0 0 0px;
+					padding: 0 0 0 0px;
+				}
+
+				.winner-icon {
+					background-color: #a0d7db;
 				}
 			</style>
 
