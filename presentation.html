@@ -42,14 +42,18 @@
 				</p>
 			</section>
 
-			<section>
-				<h3>
-					What do we need?
-				</h3>
+			<section class="small-slide">
+				<h3>What do we need?</h3>
 				<ol>
-					<li>Model environment</li>
-					<li>Set up agents</li>
-					<li>Evaluate their Monopoly performance!</li>
+					<li>
+						Model environment <span class="fragment monopoly_red">← Game board &amp; rules</span>
+					</li>
+					<li>
+						Set up agents <span class="fragment monopoly_red">← Players</span>
+					</li>
+					<li>
+						Evaluate their Monopoly performance! <span class="fragment monopoly_red">← Who wins?</span>
+					</li>
 				</ol>
 			</section>
 
@@ -166,8 +170,8 @@ Property:
 				</section>
 			</section>
 
-			
-				
+
+
 			<section>
 				<h2>We need different players</h2>
 			</section>
@@ -175,127 +179,128 @@ Property:
 			<section>
 				<!-- all fp playes -->
 				<section>
-				<h3>Player 1-3: fixed policy</h3>
-				<div style="display: flex; align-items: center;">
-					<!-- Left: Image -->
+					<h3>Player 1-3: fixed policy</h3>
+					<div style="display: flex; align-items: center;">
+						<!-- Left: Image -->
 						<div style="flex: 1; text-align: center;">
 							<a href="https://revealjs.com">
 								<img src="imgs/hut1.png" style="max-height: 100px; background: transparent;">
 							</a>
+						</div>
+						<div style="flex: 1; padding-left: 15px;">
+							<p>FP-A</p>
+						</div>
 					</div>
-					<div style="flex: 1; padding-left: 15px;">
-						<p>FP-A</p>
-					</div>	
-				</div>
 
-				<div style="display: flex; align-items: center;">
-					<!-- Left: Image -->
+					<div style="display: flex; align-items: center;">
+						<!-- Left: Image -->
 						<div style="flex: 1; text-align: center;">
 							<a href="https://revealjs.com">
 								<img src="imgs/hut2.png" style="max-height: 100px; background: transparent;">
 							</a>
+						</div>
+						<div style="flex: 1; padding-left: 15px;">
+							<p>FP-B</p>
+						</div>
 					</div>
-					<div style="flex: 1; padding-left: 15px;">
-						<p>FP-B</p>
-					</div>	
-				</div>
 
-				<div style="display: flex; align-items: center;">
-					
+					<div style="display: flex; align-items: center;">
+
 						<div style="flex: 1; text-align: center;">
 							<a href="https://revealjs.com">
 								<img src="imgs/hut3.png" style="max-height: 100px; background: transparent;">
 							</a>
+						</div>
+						<div style="flex: 1; padding-left: 15px;">
+							<p>FP-C</p>
+						</div>
 					</div>
-					<div style="flex: 1; padding-left: 15px;">
-						<p>FP-C</p>
-					</div>	
-				</div>
-			</section>
-			
-			<!-- fpA -->
-			<section>
-				<div style="display: flex; align-items: center;">
-					<!-- Left: Image -->
-					<div style="flex: 1; text-align: center;">
-						<a href="https://revealjs.com">
-							<img src="imgs/hut1.png" style="max-height: 150px; background: transparent;">
-						</a>
-					</div>
-					<div style="flex: 1; padding-left: 15px;">
-						<p>FP-A</p>
-					</div>
-				</div>
-				<div>
-					<p>describe policy mit darstellung aller straßen nach größe</p>
-					<p>all streets are the same</p>
-					<a href="https://revealjs.com">
-							<img src="imgs/balkendiagramm_transparent.png" style="max-height: 150px; background: transparent;">
-					</a>
-				</div>
-			</section>
+				</section>
 
-			<!-- fpB -->
-			 <section>
-				<div style="display: flex; align-items: center;">
-					<!-- Left: Image -->
-					<div style="flex: 1; text-align: center;">
+				<!-- fpA -->
+				<section>
+					<div style="display: flex; align-items: center;">
+						<!-- Left: Image -->
+						<div style="flex: 1; text-align: center;">
+							<a href="https://revealjs.com">
+								<img src="imgs/hut1.png" style="max-height: 150px; background: transparent;">
+							</a>
+						</div>
+						<div style="flex: 1; padding-left: 15px;">
+							<p>FP-A</p>
+						</div>
+					</div>
+					<div>
+						<p>describe policy mit darstellung aller straßen nach größe</p>
+						<p>all streets are the same</p>
 						<a href="https://revealjs.com">
-							<img src="imgs/hut2.png" style="max-height: 150px; background: transparent;">
+							<img src="imgs/balkendiagramm_transparent.png"
+								style="max-height: 150px; background: transparent;">
 						</a>
 					</div>
-					<div style="flex: 1; padding-left: 15px;">
-						<p>FP-B</p>
-					</div>
-				</div>
-				<div>
-					<p>describe policy mit darstellung aller straßen nach größe</p>
-					<p>loves railroads</p>
-					<p>loves parkplace and boardwalk</p>
-				</div>
-			</section>
+				</section>
 
-			<!-- fpC -->
-			<section>
-				<div style="display: flex; align-items: center;">
-					<!-- Left: Image -->
-					<div style="flex: 1; text-align: center;">
-						<a href="https://revealjs.com">
-							<img src="imgs/hut3.png" style="max-height: 150px; background: transparent;">
-						</a>
+				<!-- fpB -->
+				<section>
+					<div style="display: flex; align-items: center;">
+						<!-- Left: Image -->
+						<div style="flex: 1; text-align: center;">
+							<a href="https://revealjs.com">
+								<img src="imgs/hut2.png" style="max-height: 150px; background: transparent;">
+							</a>
+						</div>
+						<div style="flex: 1; padding-left: 15px;">
+							<p>FP-B</p>
+						</div>
 					</div>
-					<div style="flex: 1; padding-left: 15px;">
-						<p>FP-C</p>
+					<div>
+						<p>describe policy mit darstellung aller straßen nach größe</p>
+						<p>loves railroads</p>
+						<p>loves parkplace and boardwalk</p>
 					</div>
-				</div>
-				<div>
-					<p>describe policy mit darstellung aller straßen nach größe</p>
-					<p>loves railroads</p>
-					<p>loves orange and skyblue</p>
-				</div>
-			</section>
+				</section>
+
+				<!-- fpC -->
+				<section>
+					<div style="display: flex; align-items: center;">
+						<!-- Left: Image -->
+						<div style="flex: 1; text-align: center;">
+							<a href="https://revealjs.com">
+								<img src="imgs/hut3.png" style="max-height: 150px; background: transparent;">
+							</a>
+						</div>
+						<div style="flex: 1; padding-left: 15px;">
+							<p>FP-C</p>
+						</div>
+					</div>
+					<div>
+						<p>describe policy mit darstellung aller straßen nach größe</p>
+						<p>loves railroads</p>
+						<p>loves orange and skyblue</p>
+					</div>
+				</section>
 
 			</section>
 			<section>
 				<section>
 					<h3>Player 2: PPO player</h3>
 					<div style="display: flex; align-items: center;">
-					<!-- Left: Image -->
-							<div style="flex: 1; text-align: center;">
-								<a href="https://revealjs.com">
-									<img src="imgs/dog1.png" style="max-height: 100px; background: transparent;">
-								</a>
+						<!-- Left: Image -->
+						<div style="flex: 1; text-align: center;">
+							<a href="https://revealjs.com">
+								<img src="imgs/dog1.png" style="max-height: 100px; background: transparent;">
+							</a>
 						</div>
 						<div style="flex: 1; padding-left: 15px;">
 							<p>FP-A</p>
-						</div>	
+						</div>
 					</div>
 				</section>
 				<section>
-						<p>todo</p>
-						<a href="https://revealjs.com">
-								<img src="imgs/ppo_agent.png" style="max-height: 400px; background: transparent;">
-						</a>
+					<p>todo</p>
+					<a href="https://revealjs.com">
+						<img src="imgs/ppo_agent.png" style="max-height: 400px; background: transparent;">
+					</a>
 				</section>
 			</section>
 			<section>
@@ -310,20 +315,20 @@ Property:
 						</div>
 						<div style="flex: 1; padding-left: 15px;">
 							<p>FP-A</p>
-						</div>	
+						</div>
 					</div>
 				</section>
 				<section>
 					<p>todo</p>
 					<a href="https://revealjs.com">
-								<img src="imgs/ddqn.png" style="max-height: 400px; background: transparent;">
+						<img src="imgs/ddqn.png" style="max-height: 400px; background: transparent;">
 					</a>
 				</section>
 			</section>
 			<section>
 				<section>
 					<h3>Player 4: hybrid</h3>
-				
+
 					<div style="display: flex; align-items: center;">
 						<!-- Left: Image -->
 						<div style="flex: 1; text-align: center;">
@@ -483,6 +488,17 @@ Property:
 					max-height: 24px;
 					margin-bottom: 1em;
 					object-fit: contain;
+				}
+
+				.monopoly_red {
+					color: #d40000;
+					/* Monopoly red */
+					font-style: italic;
+					margin-left: 0.5em;
+				}
+
+				.small-slide {
+					font-size: 0.8em;
 				}
 			</style>
 
