@@ -188,164 +188,119 @@ Property:
 			<section>
 				<!-- all fp playes -->
 				<section>
-					<h3>Player 1-3: fixed policy</h3>
-					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/hut1.png" style="max-height: 100px; background: transparent;">
-							</a>
+					<div style="height: 200px; margin-bottom: 20px;">
+						<div style="display: flex; align-items: center;">
+							<div style="flex: 1; text-align: center;">
+								<a href="https://revealjs.com">
+									<img src="imgs/hut1.png" style="max-height: 100px; background: transparent;">
+								</a>
+							</div>
+							<div style="flex: 1; padding-left: 15px;">
+								<p>FP-A</p>
+							</div>	
 						</div>
-						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-A</p>
-						</div>
-					</div>
-
-					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/hut2.png" style="max-height: 100px; background: transparent;">
-							</a>
-						</div>
-						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-B</p>
+						<div>
+							<img src="imgs/balkendiagramm_fpa.png" style="max-height: 80px; background: transparent;">			
 						</div>
 					</div>
 
-					<div style="display: flex; align-items: center;">
-
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/hut3.png" style="max-height: 100px; background: transparent;">
-							</a>
+					<div style="height: 200px; margin-bottom: 20px;">
+						<div style="display: flex; align-items: center;">
+							<!-- Left: Image -->
+								<div style="flex: 1; text-align: center;">
+									<a href="https://revealjs.com">
+										<img src="imgs/hut2.png" style="max-height: 100px; background: transparent;">
+									</a>
+							</div>
+							<div style="flex: 1; padding-left: 15px;">
+								<p>FP-B</p>
+							</div>	
 						</div>
-						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-C</p>
+						<div>
+							<a href="https://revealjs.com">
+										<img src="imgs/balkendiagramm_fpb.png" style="max-height: 80px; background: transparent;">
+									</a>	
 						</div>
 					</div>
-				</section>
 
-				<!-- fpA -->
+					<div style="height: 200px; margin-bottom: 20px;">
+						<div style="display: flex; align-items: center;">
+								<div style="flex: 1; text-align: center;">
+									<a href="https://revealjs.com">
+										<img src="imgs/hut3.png" style="max-height: 100px; background: transparent;">
+									</a>
+							</div>
+							<div style="flex: 1; padding-left: 15px;">
+								<p>FP-C</p>
+							</div>	
+						</div>
+						<div>
+							<a href="https://revealjs.com">
+										<img src="imgs/balkendiagramm_fpc.png" style="max-height: 80px; background: transparent;">
+									</a>	
+						</div>
+					</div>
+			</section>
+			
+			
+			</section>
+			<section>
 				<section>
 					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/hut1.png" style="max-height: 150px; background: transparent;">
-							</a>
+							<div style="flex: 1; text-align: center;">
+								<a href="https://revealjs.com">
+									<img src="imgs/dog1.png" style="max-height: 100px; background: transparent;">
+								</a>
 						</div>
 						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-A</p>
-						</div>
+							<p>PPO player</p>
+						</div>	
 					</div>
-					<div>
-						<p>describe policy mit darstellung aller straßen nach größe</p>
-						<p>all streets are the same</p>
+				</section>
+				<section>
+						<p>actor-critic PPO algorithm (siehe Paper) with clipped surrogate function</p>
+						<p>makes use of two independet networks: 1. actor network, 2. critic network</p>
+						<p>actor network: policy function (action depending on state), critic network: value function (value of given state)</p>
+
 						<a href="https://revealjs.com">
-							<img src="imgs/balkendiagramm_transparent.png"
-								style="max-height: 150px; background: transparent;">
+								<img src="imgs/ppo_agent.png" style="max-height: 400px; background: transparent;">
 						</a>
-					</div>
-				</section>
-
-				<!-- fpB -->
-				<section>
-					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/hut2.png" style="max-height: 150px; background: transparent;">
-							</a>
-						</div>
-						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-B</p>
-						</div>
-					</div>
-					<div>
-						<p>describe policy mit darstellung aller straßen nach größe</p>
-						<p>loves railroads</p>
-						<p>loves parkplace and boardwalk</p>
-					<a href="https://revealjs.com">
-							<img src="imgs/balkendiagramm_fpb.png" style="max-height: 150px; background: transparent;">
-					</a>
-					</div>
-				</section>
-
-				<!-- fpC -->
-				<section>
-					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/hut3.png" style="max-height: 150px; background: transparent;">
-							</a>
-						</div>
-						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-C</p>
-						</div>
-					</div>
-					<div>
-						<p>describe policy mit darstellung aller straßen nach größe</p>
-						<p>loves railroads</p>
-						<p>loves orange and skyblue</p>
-					<a href="https://revealjs.com">
-							<img src="imgs/balkendiagramm_fpc.png" style="max-height: 150px; background: transparent;">
-					</a>
-					</div>
-				</section>
-
-			</section>
-			<section>
-				<section>
-					<h3>Player 2: PPO player</h3>
-					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
-						<div style="flex: 1; text-align: center;">
-							<a href="https://revealjs.com">
-								<img src="imgs/dog1.png" style="max-height: 100px; background: transparent;">
-							</a>
-						</div>
-						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-A</p>
-						</div>
-					</div>
 				</section>
 				<section>
-					<p>todo</p>
-					<a href="https://revealjs.com">
-						<img src="imgs/ppo_agent.png" style="max-height: 400px; background: transparent;">
-					</a>
+						<p>architecture</p>
 				</section>
 			</section>
 			<section>
 				<section>
-					<h3>Player 3: DDQN player</h3>
 					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
 						<div style="flex: 1; text-align: center;">
 							<a href="https://revealjs.com">
 								<img src="imgs/car1.png" style="max-height: 100px; background: transparent;">
 							</a>
 						</div>
 						<div style="flex: 1; padding-left: 15px;">
-							<p>FP-A</p>
-						</div>
+							<p>DDQN player</p>
+						</div>	
 					</div>
 				</section>
 				<section>
-					<p>todo</p>
+					<p>makes use of an experience replay and e-greedy stategy</p>
+					<p>uses two networks: 1. online network, 2. target network</p>
+					<p>online network: used to select actions, target network: used to calculate the target Q-value</p>
+					<p>DDQN: Double Deep Q-Network, uses two networks to reduce overestimation bias</p>
+					<p>DDQN uses a replay buffer to store past experiences and sample them for training</p>
+					<p>DDQN uses a target network to stabilize training</p>
 					<a href="https://revealjs.com">
 						<img src="imgs/ddqn.png" style="max-height: 400px; background: transparent;">
 					</a>
 				</section>
+				<section>
+						<p>architecture</p>
+				</section>
 			</section>
 			<section>
-				<section>
-					<h3>Player 4: hybrid</h3>
-
+				<section>			
 					<div style="display: flex; align-items: center;">
-						<!-- Left: Image -->
 						<div style="flex: 1; text-align: center;">
 							<a href="https://revealjs.com">
 								<img src="imgs/dog_with_hat.png" style="max-height: 100px; background: transparent;">
@@ -363,7 +318,7 @@ Property:
 				</section>
 				<section>
 					<p>fixed policy for: buy property, accept trade</p>
-					<p>net worth formula (wichtig?)</p>
+					<p>erkläre regeln</p>
 				</section>
 			</section>
 
