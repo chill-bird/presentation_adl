@@ -177,13 +177,14 @@ Property:
 						</div>
 					</div>
 				</section>
+				<section>
+				<h2>Who is playing with us?</h2>
+			</section>
 			</section>
 
 
 
-			<section>
-				<h2>We need different players</h2>
-			</section>
+			
 
 			<section>
 				<!-- all fp playes -->
@@ -242,7 +243,6 @@ Property:
 					</div>
 			</section>
 			
-			
 			</section>
 			<section>
 				<section>
@@ -253,27 +253,32 @@ Property:
 								</a>
 						</div>
 						<div style="flex: 1; padding-left: 15px;">
-							<p>PPO player</p>
+							<p>Actor-Critic PPO Agent</p>
 						</div>	
 					</div>
 				</section>
 				<section>
-						<p>actor-critic PPO algorithm (siehe Paper) with clipped surrogate function</p>
-						<p>makes use of two independet networks: 1. actor network, 2. critic network</p>
-						<p>actor network: policy function (action depending on state), critic network: value function (value of given state)</p>
-
+						<h4>proximal policy optimization agent</h4>
 						<a href="https://revealjs.com">
 								<img src="imgs/ppo_agent.png" style="max-height: 400px; background: transparent;">
 						</a>
 				</section>
 				<section>
-						<h4>architecture</h4>
-						<p>fully connected FFN for actor and critic</p>
-						<p>input: current state (DIM=240)</p>
-						<p>hidden layers: 1024 and 512 neurons with ReLU</p>
-						<p>output:<br>actor: 2922, each represents an action</br><br>actor: 1, single scalar depicting value of current state</br></p>
+					<h4>Architecture</h4>
+					<ul>
+					<li><strong>Type:</strong> Fully connected feedforward network (FFN) for both actor and critic</li>
+					<li><strong>Input:</strong> Current state vector (dimension = 240)</li>
+					<li><strong>Hidden Layers:</strong> Two layers with 1024 and 512 neurons, using ReLU activation</li>
+					<li><strong>Output:</strong>
+						<ul>
+						<li><strong>Actor:</strong> 2922 neurons — one per possible action</li>
+						<li><strong>Critic:</strong> 1 neuron — scalar value estimating the current state's value</li>
+						</ul>
+					</li>
+					</ul>
 				</section>
 			</section>
+
 			<section>
 				<section>
 					<div style="display: flex; align-items: center;">
@@ -283,23 +288,25 @@ Property:
 							</a>
 						</div>
 						<div style="flex: 1; padding-left: 15px;">
-							<p>DDQN player</p>
+							<p>DDQN Agent</p>
 						</div>	
 					</div>
 				</section>
 				<section>
-					<p>makes use of an experience replay and e-greedy stategy</p>
-					<p>uses two networks: 1. online network, 2. target network</p>
-					<p>online network: used to select actions, target network: used to calculate the target Q-value</p>
-					<p>DDQN: Double Deep Q-Network, uses two networks to reduce overestimation bias</p>
-					<p>DDQN uses a replay buffer to store past experiences and sample them for training</p>
-					<p>DDQN uses a target network to stabilize training</p>
+					<h4>Double Deep Q-Network Agent</h4>
 					<a href="https://revealjs.com">
 						<img src="imgs/ddqn.png" style="max-height: 400px; background: transparent;">
 					</a>
 				</section>
 				<section>
-						<h4>architecture</h4>
+						<h4>Architecture</h4>
+						<ul>
+						<li><strong>Type:</strong> Fully connected feedforward network (FFN) to approximate the policy</li>
+						<li><strong>Input:</strong> State of the environment represented as a 240-dimensional vector</li>
+						<li><strong>Hidden Layers:</strong> Two layers with 1024 and 512 neurons, using ReLU activation</li>
+						<li><strong>Output:</strong> 2922 neurons — each representing a Q-value for a specific action</li>
+						<li><strong>Target Network:</strong> Identical architecture and parameters, used for stable learning</li>
+						</ul>
 				</section>
 			</section>
 			<section>
@@ -316,13 +323,22 @@ Property:
 							</a>
 						</div>
 					</div>
-					<div style="display: flex; align-items: center;">
-						<p>hybrid agents that integrate DRL approaches with a fixed-policy approach</p>
+					<div style="display: flex; justify-content: center; align-items: center;">
+  						<p>Hybrid Agents</p>
 					</div>
+
 				</section>
 				<section>
-					<p>fixed policy for: buy property, accept trade</p>
-					<p>erkläre regeln</p>
+					<p><em>By using a rule-based approach for the rare occuring but simple decisions and a learning-based approach for the more frequent but complex decisions, we can improve the overall performance.</em></p>
+				</section>
+				<section>
+					<h4>Fixed policies</h4>
+					<ul>
+					<li><strong>Accept Offer</strong> if it increases the number of monopolies</li>
+					<li><strong>Accept Offer</strong> if net worth of the offer is positive</li>
+					<li><strong>Land on bank owned property</strong> buy if it results in a monopoly as long as it can afford it</li>
+					<li><strong>Land on bank owned property</strong> buy if agent has 200$ more than the property price</li>
+					</ul>
 				</section>
 			</section>
 
